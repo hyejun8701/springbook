@@ -18,7 +18,6 @@ public class TVUser {
 		
 		// 3. Spring 컨테이너 종료
 		factory.close();
-		
 	}
 
 }
