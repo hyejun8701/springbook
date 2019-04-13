@@ -10,7 +10,7 @@ public class TVUser {
 		AbstractApplicationContext factory = new GenericXmlApplicationContext("applicationContext.xml");
 		
 		// 2. Spring 컨테이너로 부터 필요한 객체 요청(lookup)
-		TV tv = (TV) factory.getBean(TV.class);
+		TV tv = (TV) factory.getBean("lgTV");
 		tv.powerOn();
 		tv.volumeUp();
 		tv.volumeDown();
