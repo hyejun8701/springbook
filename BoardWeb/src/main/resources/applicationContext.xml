@@ -24,17 +24,17 @@
 		
 		<!-- <aop:aspect ref="before">
 			<aop:before pointcut-ref="allPointCut" method="beforeLog" />
-		</aop:aspect>
+		</aop:aspect> -->
 		
-		<aop:aspect ref="afterRetuning">
-			<aop:after-returning pointcut-ref="getPointCut" method="afterLog" />
-		</aop:aspect>
+		<!-- <aop:aspect ref="afterRetuning">
+			<aop:after-returning pointcut-ref="getPointCut" method="afterLog" returning="returnObj" />
+		</aop:aspect> -->
 		
-		<aop:aspect ref="afterThrowing">
-			<aop:after-throwing pointcut-ref="allPointCut" method="exceptionLog" />
-		</aop:aspect>
+		<!-- <aop:aspect ref="afterThrowing">
+			<aop:after-throwing pointcut-ref="allPointCut" method="exceptionLog" throwing="exceptObj" />
+		</aop:aspect> -->
 		
-		<aop:aspect ref="after">
+		<!-- <aop:aspect ref="after">
 			<aop:after pointcut-ref="allPointCut" method="finallyLog" />
 		</aop:aspect> -->
 		
