@@ -10,17 +10,19 @@
 
 	<context:component-scan base-package="com.springbook.biz" />
 	
-	<bean id="log" class="com.springbook.biz.common.LogAdvice"></bean>
+	<aop:aspectj-autoproxy/>
+	
+	<!-- <bean id="log" class="com.springbook.biz.common.LogAdvice"></bean>
 	<bean id="log4j" class="com.springbook.biz.common.Log4jAdvice"></bean>
 	<bean id="before" class="com.springbook.biz.common.BeforeAdvice"></bean>
 	<bean id="afterRetuning" class="com.springbook.biz.common.AfterReturningAdvice"></bean>
 	<bean id="afterThrowing" class="com.springbook.biz.common.AfterThrowingAdvice"></bean>
 	<bean id="after" class="com.springbook.biz.common.AfterAdvice"></bean>
-	<bean id="around" class="com.springbook.biz.common.AroundAdvice"></bean>
+	<bean id="around" class="com.springbook.biz.common.AroundAdvice"></bean> -->
 	
-	<aop:config>
+	<!-- <aop:config>
 		<aop:pointcut id="allPointCut" expression="execution(* com.springbook.biz..*Impl.*(..))" />
-		<aop:pointcut id="getPointCut" expression="execution(* com.springbook.biz..*Impl.get*(..))" />
+		<aop:pointcut id="getPointCut" expression="execution(* com.springbook.biz..*Impl.get*(..))" /> -->
 		
 		<!-- <aop:aspect ref="before">
 			<aop:before pointcut-ref="allPointCut" method="beforeLog" />
@@ -38,9 +40,9 @@
 			<aop:after pointcut-ref="allPointCut" method="finallyLog" />
 		</aop:aspect> -->
 		
-		<aop:aspect ref="around">
+		<!-- <aop:aspect ref="around">
 			<aop:around pointcut-ref="allPointCut" method="aroundLog" />
-		</aop:aspect>
+		</aop:aspect> -->
 		
 		<!-- <aop:aspect ref="log">
 			<aop:pointcut expression="execution(* com.springbook.biz..*Impl.*(..))" id="testPointCut"/>
@@ -50,7 +52,7 @@
 		<aop:aspect ref="log4j">
 			<aop:before pointcut-ref="allPointCut" method="printLogging" />
 		</aop:aspect> -->
-	</aop:config>
+	<!-- </aop:config> -->
 	
 	<!-- <bean id="userService" class="com.springbook.biz.user.impl.UserServiceImpl">
 		<property name="userDAO" ref="userDAO"></property>
