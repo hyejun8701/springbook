@@ -7,13 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class LgTV implements TV {
-	/*@Autowired
-	@Qualifier("appleSpeaker")
-	private Speaker speaker;*/
-	
-	@Inject
+	//@Autowired
 	private Speaker speaker;
 	
 	public LgTV() {
